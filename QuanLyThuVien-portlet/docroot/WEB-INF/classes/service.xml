@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="thuvien.porlet">
+	<author>HungThai</author>
+	<namespace>QuanLyThuVien</namespace>
+
+	<entity local-service="true" name="Sach" table="sach" data-source="qlthuvienDataSource">
+			<column name="Id" db-name="id" primary="true" type="long" />
+			<column name="TenSach" db-name="tensach" type="String" />
+			<column name="TheLoaiId" db-name="theloaiid" type="long" />
+			<column name="SoLuong" db-name="soluong" type="long" />
+			<column name="TrangThai" db-name="trangthai" type="String" />
+			<column name="NhaXB" db-name="nhaxb" type="String" />
+			<column name="MaSach" db-name="masach" type="String" />
+			<column name="Ke" db-name="ke" type="String" />
+			<column name="Tang" db-name="tang" type="String" />
+		</entity>
+		
+		<entity local-service="true" name="TheLoai" table="theloai" data-source="qlthuvienDataSource">
+			<column name="Id" db-name="id" primary="true" type="long" />
+			<column name="TenTheLoai" db-name="tentheloai" type="String" />
+		</entity>
+		
+		<entity local-service="true" name="PhieuMuon" table="phieumuon" data-source="qlthuvienDataSource">
+			<column name="Id" db-name="id" primary="true" type="long" />
+			<column name="UserId" db-name="userid" type="String" />
+			<column name="SachId" db-name="sachid" type="long" />
+			<column name="NgayMuon" db-name="ngaymuon" type="Date" />
+			<column name="NgayTra" db-name="ngaytra" type="Date" />
+			<column name="SoLuong" db-name="soluong" type="long" />
+			<column name="XacNhan" db-name="xacnhan" type="String" />
+			<column name="TrangThai" db-name="trangthai" type="String" />
+		</entity>
+
+</service-builder>

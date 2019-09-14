@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="ispace.model.impl.LoaiVanBanModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="Ten">
+				<column name="TEN" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="ispace.model.impl.LuanChuyenModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="KieuVanBan">
+				<column name="KIEUVANBAN" />
+			</basic>
+			<basic name="IdVanBan">
+				<column name="IDVANBAN" />
+			</basic>
+			<basic name="NgayGui">
+				<column name="NGAYGUI" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="NgayNhan">
+				<column name="NGAYNHAN" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="NguoiGui">
+				<column name="NGUOIGUI" />
+			</basic>
+			<basic name="NguoiNhan">
+				<column name="NGUOINHAN" />
+			</basic>
+			<basic name="YKien">
+				<column name="YKIEN" />
+			</basic>
+			<basic name="HanXuLi">
+				<column name="HANXULI" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="YKienPhanHoi">
+				<column name="YKIENPHANHOI" />
+			</basic>
+			<basic name="NgayPhanHoi">
+				<column name="NGAYPHANHOI" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="ispace.model.impl.NguoiDungModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="Ten">
+				<column name="TEN" />
+			</basic>
+			<basic name="NguoiKy">
+				<column name="NGUOIKY" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="ispace.model.impl.SoVanBanModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="Ten">
+				<column name="TEN" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="ispace.model.impl.VanBanDenModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="SoKiHieu">
+				<column name="SOKIHIEU" />
+			</basic>
+			<basic name="LoaiVanBan">
+				<column name="LOAIVANBAN" />
+			</basic>
+			<basic name="SoVanBan">
+				<column name="SOVANBAN" />
+			</basic>
+			<basic name="NguoiKy">
+				<column name="NGUOIKY" />
+			</basic>
+			<basic name="NgayKy">
+				<column name="NGAYKY" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="ispace.model.impl.VanBanDiModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="SoKiHieu">
+				<column name="SOKIHIEU" />
+			</basic>
+			<basic name="LoaiVanBan">
+				<column name="LOAIVANBAN" />
+			</basic>
+			<basic name="SoVanBan">
+				<column name="SOVANBAN" />
+			</basic>
+			<basic name="NguoiKy">
+				<column name="NGUOIKY" />
+			</basic>
+			<basic name="NgayKy">
+				<column name="NGAYKY" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="ispace.model.impl.LoaiVanBanImpl" name="LoaiVanBan">
+		<table name="loaivanban" />
+		<attributes />
+	</entity>
+	<entity class="ispace.model.impl.LuanChuyenImpl" name="LuanChuyen">
+		<table name="luanchuyen" />
+		<attributes />
+	</entity>
+	<entity class="ispace.model.impl.NguoiDungImpl" name="NguoiDung">
+		<table name="nguoidung" />
+		<attributes />
+	</entity>
+	<entity class="ispace.model.impl.SoVanBanImpl" name="SoVanBan">
+		<table name="sovanban" />
+		<attributes />
+	</entity>
+	<entity class="ispace.model.impl.VanBanDenImpl" name="VanBanDen">
+		<table name="vanbanden" />
+		<attributes />
+	</entity>
+	<entity class="ispace.model.impl.VanBanDiImpl" name="VanBanDi">
+		<table name="vanbandi" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	<category name="category.sample">
+		<portlet id="QanLyVanBan" />
+		<portlet id="so-van-ban"></portlet>
+		<portlet id="nguoi-dung"></portlet>
+		<portlet id="van-ban-den"></portlet>
+		<portlet id="van-ban-di"></portlet>
+		<portlet id="luan-chuyen"></portlet>
+		<portlet id="loai-van-ban"></portlet>
+	</category>
+</display>

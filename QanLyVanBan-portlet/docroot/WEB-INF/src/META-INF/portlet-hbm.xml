@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="ispace.model.LoaiVanBan" />
+	<import class="ispace.model.LuanChuyen" />
+	<import class="ispace.model.NguoiDung" />
+	<import class="ispace.model.SoVanBan" />
+	<import class="ispace.model.VanBanDen" />
+	<import class="ispace.model.VanBanDi" />
+	<class name="ispace.model.impl.LoaiVanBanImpl" table="loaivanban">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="Ten" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ten" />
+	</class>
+	<class name="ispace.model.impl.LuanChuyenImpl" table="luanchuyen">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="KieuVanBan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="kieuvanban" />
+		<property name="IdVanBan" type="com.liferay.portal.dao.orm.hibernate.LongType" column="idvanban" />
+		<property name="NgayGui" type="org.hibernate.type.TimestampType" column="ngaygui" />
+		<property name="NgayNhan" type="org.hibernate.type.TimestampType" column="ngaynhan" />
+		<property name="NguoiGui" type="com.liferay.portal.dao.orm.hibernate.StringType" column="nguoigui" />
+		<property name="NguoiNhan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="nguoinhan" />
+		<property name="YKien" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ykien" />
+		<property name="HanXuLi" type="org.hibernate.type.TimestampType" column="hanxuli" />
+		<property name="YKienPhanHoi" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ykienphanhoi" />
+		<property name="NgayPhanHoi" type="org.hibernate.type.TimestampType" column="ngayphanhoi" />
+	</class>
+	<class name="ispace.model.impl.NguoiDungImpl" table="nguoidung">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="Ten" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ten" />
+		<property name="NguoiKy" type="com.liferay.portal.dao.orm.hibernate.StringType" column="nguoiky" />
+	</class>
+	<class name="ispace.model.impl.SoVanBanImpl" table="sovanban">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="Ten" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ten" />
+	</class>
+	<class name="ispace.model.impl.VanBanDenImpl" table="vanbanden">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="SoKiHieu" type="com.liferay.portal.dao.orm.hibernate.StringType" column="sokihieu" />
+		<property name="LoaiVanBan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="loaivanban" />
+		<property name="SoVanBan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="sovanban" />
+		<property name="NguoiKy" type="com.liferay.portal.dao.orm.hibernate.StringType" column="nguoiky" />
+		<property name="NgayKy" type="org.hibernate.type.TimestampType" column="ngayky" />
+	</class>
+	<class name="ispace.model.impl.VanBanDiImpl" table="vanbandi">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="SoKiHieu" type="com.liferay.portal.dao.orm.hibernate.StringType" column="sokihieu" />
+		<property name="LoaiVanBan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="loaivanban" />
+		<property name="SoVanBan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="sovanban" />
+		<property name="NguoiKy" type="com.liferay.portal.dao.orm.hibernate.StringType" column="nguoiky" />
+		<property name="NgayKy" type="org.hibernate.type.TimestampType" column="ngayky" />
+	</class>
+</hibernate-mapping>

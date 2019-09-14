@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="ispace.service.LoaiVanBanLocalService" class="ispace.service.impl.LoaiVanBanLocalServiceImpl" />
+	<bean id="ispace.service.LoaiVanBanService" class="ispace.service.impl.LoaiVanBanServiceImpl" />
+	<bean id="ispace.service.persistence.LoaiVanBanPersistence" class="ispace.service.persistence.LoaiVanBanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlvanbanDataSource" />
+	</bean>
+	<bean id="ispace.service.LuanChuyenLocalService" class="ispace.service.impl.LuanChuyenLocalServiceImpl" />
+	<bean id="ispace.service.LuanChuyenService" class="ispace.service.impl.LuanChuyenServiceImpl" />
+	<bean id="ispace.service.persistence.LuanChuyenPersistence" class="ispace.service.persistence.LuanChuyenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlvanbanDataSource" />
+	</bean>
+	<bean id="ispace.service.NguoiDungLocalService" class="ispace.service.impl.NguoiDungLocalServiceImpl" />
+	<bean id="ispace.service.NguoiDungService" class="ispace.service.impl.NguoiDungServiceImpl" />
+	<bean id="ispace.service.persistence.NguoiDungPersistence" class="ispace.service.persistence.NguoiDungPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlvanbanDataSource" />
+	</bean>
+	<bean id="ispace.service.SoVanBanLocalService" class="ispace.service.impl.SoVanBanLocalServiceImpl" />
+	<bean id="ispace.service.SoVanBanService" class="ispace.service.impl.SoVanBanServiceImpl" />
+	<bean id="ispace.service.persistence.SoVanBanPersistence" class="ispace.service.persistence.SoVanBanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlvanbanDataSource" />
+	</bean>
+	<bean id="ispace.service.VanBanDenLocalService" class="ispace.service.impl.VanBanDenLocalServiceImpl" />
+	<bean id="ispace.service.VanBanDenService" class="ispace.service.impl.VanBanDenServiceImpl" />
+	<bean id="ispace.service.persistence.VanBanDenPersistence" class="ispace.service.persistence.VanBanDenPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlvanbanDataSource" />
+	</bean>
+	<bean id="ispace.service.VanBanDiLocalService" class="ispace.service.impl.VanBanDiLocalServiceImpl" />
+	<bean id="ispace.service.VanBanDiService" class="ispace.service.impl.VanBanDiServiceImpl" />
+	<bean id="ispace.service.persistence.VanBanDiPersistence" class="ispace.service.persistence.VanBanDiPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlvanbanDataSource" />
+	</bean>
+</beans>

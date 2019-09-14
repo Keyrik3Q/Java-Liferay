@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="thuvien.porlet.model.impl.PhieuMuonModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="UserId">
+				<column name="USERID" />
+			</basic>
+			<basic name="SachId">
+				<column name="SACHID" />
+			</basic>
+			<basic name="NgayMuon">
+				<column name="NGAYMUON" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="NgayTra">
+				<column name="NGAYTRA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="SoLuong">
+				<column name="SOLUONG" />
+			</basic>
+			<basic name="XacNhan">
+				<column name="XACNHAN" />
+			</basic>
+			<basic name="TrangThai">
+				<column name="TRANGTHAI" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="thuvien.porlet.model.impl.SachModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="TenSach">
+				<column name="TENSACH" />
+			</basic>
+			<basic name="TheLoaiId">
+				<column name="THELOAIID" />
+			</basic>
+			<basic name="SoLuong">
+				<column name="SOLUONG" />
+			</basic>
+			<basic name="TrangThai">
+				<column name="TRANGTHAI" />
+			</basic>
+			<basic name="NhaXB">
+				<column name="NHAXB" />
+			</basic>
+			<basic name="MaSach">
+				<column name="MASACH" />
+			</basic>
+			<basic name="Ke">
+				<column name="KE" />
+			</basic>
+			<basic name="Tang">
+				<column name="TANG" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="thuvien.porlet.model.impl.TheLoaiModelImpl">
+		<attributes>
+			<id name="Id">
+				<column name="ID" />
+			</id>
+			<basic name="TenTheLoai">
+				<column name="TENTHELOAI" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="thuvien.porlet.model.impl.PhieuMuonImpl" name="PhieuMuon">
+		<table name="phieumuon" />
+		<attributes />
+	</entity>
+	<entity class="thuvien.porlet.model.impl.SachImpl" name="Sach">
+		<table name="sach" />
+		<attributes />
+	</entity>
+	<entity class="thuvien.porlet.model.impl.TheLoaiImpl" name="TheLoai">
+		<table name="theloai" />
+		<attributes />
+	</entity>
+</entity-mappings>

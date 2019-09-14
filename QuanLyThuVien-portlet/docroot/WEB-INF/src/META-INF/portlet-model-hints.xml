@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="thuvien.porlet.model.PhieuMuon">
+		<field name="Id" type="long" />
+		<field name="UserId" type="String" />
+		<field name="SachId" type="long" />
+		<field name="NgayMuon" type="Date" />
+		<field name="NgayTra" type="Date" />
+		<field name="SoLuong" type="long" />
+		<field name="XacNhan" type="String" />
+		<field name="TrangThai" type="String" />
+	</model>
+	<model name="thuvien.porlet.model.Sach">
+		<field name="Id" type="long" />
+		<field name="TenSach" type="String" />
+		<field name="TheLoaiId" type="long" />
+		<field name="SoLuong" type="long" />
+		<field name="TrangThai" type="String" />
+		<field name="NhaXB" type="String" />
+		<field name="MaSach" type="String" />
+		<field name="Ke" type="String" />
+		<field name="Tang" type="String" />
+	</model>
+	<model name="thuvien.porlet.model.TheLoai">
+		<field name="Id" type="long" />
+		<field name="TenTheLoai" type="String" />
+	</model>
+</model-hints>

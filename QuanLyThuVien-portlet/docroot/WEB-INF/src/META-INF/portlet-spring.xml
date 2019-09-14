@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="thuvien.porlet.service.PhieuMuonLocalService" class="thuvien.porlet.service.impl.PhieuMuonLocalServiceImpl" />
+	<bean id="thuvien.porlet.service.PhieuMuonService" class="thuvien.porlet.service.impl.PhieuMuonServiceImpl" />
+	<bean id="thuvien.porlet.service.persistence.PhieuMuonPersistence" class="thuvien.porlet.service.persistence.PhieuMuonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="thuvien.porlet.service.SachLocalService" class="thuvien.porlet.service.impl.SachLocalServiceImpl" />
+	<bean id="thuvien.porlet.service.SachService" class="thuvien.porlet.service.impl.SachServiceImpl" />
+	<bean id="thuvien.porlet.service.persistence.SachPersistence" class="thuvien.porlet.service.persistence.SachPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="thuvien.porlet.service.TheLoaiLocalService" class="thuvien.porlet.service.impl.TheLoaiLocalServiceImpl" />
+	<bean id="thuvien.porlet.service.TheLoaiService" class="thuvien.porlet.service.impl.TheLoaiServiceImpl" />
+	<bean id="thuvien.porlet.service.persistence.TheLoaiPersistence" class="thuvien.porlet.service.persistence.TheLoaiPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+</beans>
